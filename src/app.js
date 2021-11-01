@@ -5,7 +5,7 @@ const app = express();
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast')
 const nodemon = require('nodemon')
-
+const port = process.env.port || 3000;
 const { brotliDecompressSync } = require('zlib');
 const { STATUS_CODES } = require('http');
 let address = 'madrid'
@@ -100,7 +100,7 @@ app.get('*', (req,res) => {
 
 //     res.send('help page')
 // })
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
 
     console.log('Running on port 3000') 
 })
