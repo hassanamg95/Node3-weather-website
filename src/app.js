@@ -1,10 +1,10 @@
+const nodemon = require('nodemon')
 const express = require('express') 
 const path = require('path')
 const hbs = require('hbs')
 const app = express();
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast')
-const nodemon = require('nodemon')
 const port = process.env.PORT || 5000;
 const { brotliDecompressSync } = require('zlib');
 const { STATUS_CODES } = require('http');
@@ -18,6 +18,7 @@ const partialPath = path.join(__dirname, '../templates/partials')
 // Setup handlbars engine and view location
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
+app.disable('x-powered-by')
 hbs.registerPartials(partialPath)
 
 // Setup static directory to serve
