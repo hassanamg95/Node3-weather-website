@@ -1,10 +1,8 @@
 {
-  
   "name": "web-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- 
   "scripts": {
     "start": "node src/app.js"
   },
@@ -13,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^6.14.15",
+    "hbs": "^4.1.2",
     "nodemon": "^2.0.14",
     "request": "^2.88.2",
     "restore": "^0.3.0"
@@ -22,4 +20,3 @@
     "nodemon": "^2.0.14"
   }
 }
-
